@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration-line: none;
+}
+
+
+/* -------- GENERAL ------- */
+
+.container {
+  margin: 0 10px;
+}
+.icon {
+  width: 45px;
+}
+img {
+  height: inherit;
+  width: inherit;
+}
+
+
+/* -------- HEADER ------- */
+
+header {
+  font-family: Linux Libertine,Hoefler Text,Georgia,Times New Roman,Times,serif;
+  text-align: center;
+  position: relative;
+}
+header h1 {
+  margin: 0;
+  font-weight: lighter;
+}
+header b {
+  font-weight: lighter;
+  font-size: 40px;
+}
+header p {
+  margin: 0;
+}
+header .header_text {
+  position: relative;
+  top: 54px;
+}
+header img {
+  position: relative;
+  top: 150px;
+}
+.header_logo {
+  border: 1px solid red;
+}
+
+
+.languages {
+  margin-top: -60px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.languages_box {
+  border: 1px solid red;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.language {
+  border: 1px solid red;
+  text-align: center;
+}
+.language small {
+  text-decoration: none;
+}
+
+
+/* -------- LINKS ------- */
+
+.links {
+  height: 400px;
+  background-color: rgb(211, 163, 163);
+  display: grid;
+  grid-template-columns: 35% 1fr;
+}
+.links .side-bar {
+  height: 400px;
+  background-color: rgb(159, 206, 153);
+}
+.links .other {
+  height: 400px;
+  background-color: rgb(147, 127, 202);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* --------  side-bar ------- */
+
+.side-bar_card {
+  border: 1px solid red;
+  display: flex;
+}
+.app {
+  width: auto;
+  display: flex;
+}
+.app_button {
+  width: 100%;
+}
+
+/* --------  other ------- */
+
+.other_column {
+  height: inherit;
+  background-color: rgb(110, 211, 189);
+  margin: 2px;
+}
+.other_card {
+  border: 1px solid red;
+  display: flex;
+}
+
+
+
+/* -------- FOOTER ------- */
+
+footer p {
+  text-align: start;
+}
