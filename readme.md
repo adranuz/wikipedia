@@ -1,5 +1,5 @@
 # Wikipedia clone
-A clone of wikipedia with CSS and HTML basics
+Clone of wikipedia landing page, done with CSS and HTML
 
 # Guidelines
 > colors
