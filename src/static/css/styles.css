@@ -246,7 +246,7 @@ a small:hover > small {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .read_content p {
   font-size: 14px;
@@ -255,6 +255,14 @@ a small:hover > small {
 }
 .read_content .option label {
   width: 12px;
+}
+.read_arrow {
+  margin: 0;
+  height: 12px;
+}
+.read_translate {
+  margin: 0;
+  height: 20px;
 }
 
 
@@ -285,11 +293,80 @@ footer p {
 .links {
   display: grid;
   grid-template-columns: 35% 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+    "fundation web"
+    "app web"
+    ". web";
 }
+.wiki-fundation {
+  grid-area: fundation;
+}
+.wiki-app {
+  grid-area: app;
+}
+.wiki-web {
+  grid-area: web;
+}
+
+@media (max-width: 700px) {
+  .links {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "fundation"
+    "web"
+    "app";
+  }
+  .side-bar_card {
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+  }
+  .side-bar_card p {
+    text-align: center;
+  }
+
+  .app {
+    justify-content: center;
+  }
+  .links .wiki-app {
+    margin-top: 40px;
+    position: relative;
+  }
+  .links .wiki-app figure {
+    position: absolute;
+    left: 50px;
+    width: 30px;
+    grid-area: icon-app;
+  }
+
+}
+/*
+@media (max-width: 700px) {
+  .links {
+    grid-template-columns: 1fr;
+  }
+
+  .app {
+    justify-content: center;
+  }
+  .links .wiki-fundation {
+    background:red;
+    grid-area: fundation;
+  }
+  .links .wiki-web {
+    background:red;
+    grid-area: app;
+  }
+  .links .wiki-app {
+    color:red;
+    grid-area: web;
+  }
+}*/
 .links .side-bar{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -312,6 +389,7 @@ footer p {
 }
 .side-bar_content .text-link{
   margin: 14px 0;
+  margin-top: 4px;
 }
 .icon {
   margin: 0 6px;
@@ -319,6 +397,7 @@ footer p {
 .app {
   width: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 .app_button {
   height: 35px;
@@ -331,14 +410,16 @@ footer p {
 .other {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
+  grid-template-rows: auto auto auto auto;
+  gap: 40px 0px;
 }
 .other a {
-  border: 1px solid red;
+  padding: 4px 0;
+  min-height: 45px;
+  max-height: 60px;
   display: flex;
   flex-direction: row;
   text-decoration-line: none;
-  
 }
 .other_card_text p:nth-child(odd) {
   color: var(--link-text);
@@ -349,15 +430,17 @@ footer p {
 
 footer .policy {
   color: var(--main-text);
-  margin: 18px;
+  margin: 18px 0;
+  padding: 0;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   font-family: var(--font-family-general);
 }
 footer li {
-  margin-left: 30px
+  margin-left: 20px
 }
 footer .policy a {
   font-size: 12px;
