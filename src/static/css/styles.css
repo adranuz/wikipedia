@@ -351,6 +351,13 @@ footer .policy {
   color: var(--main-text);
   margin: 18px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-general);
+}
+footer li {
+  margin-left: 30px
 }
 footer .policy a {
   font-size: 12px;
